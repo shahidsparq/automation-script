@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+  
+  <!-- Test cases for Bodt -->
+  <test name="BodtTests">
+    <classes>
+      <class name="bodt.verifyConnectYourWebsiteButtonTest"/>
+      <class name="bodt.verifyBookAcallLinkTest"/>
+      <class name="bodt.verifyHeaderLinksTest"/>
+      <class name="bodt.verifyLearnMoreLinkOFConnectYourWebsiteTest"/>
+      <class name="bodt.verifyLoginAndSignupButtonTest"/>
+      <class name="bodt.VerifytheTextPowerYourWebsitewithAIChatbotTest"/>
+      <class name="bodt.verifyTitleTest"/>
+      <class name="bodt.verifyURlTest"/>
+      <!-- Add more classes from Bodt directory if any -->
+    </classes>
+  </test>
+
+  <!-- Test cases for Sparq -->
+  <test name="SparqTests">
+    <classes>
+      <class name="sparq.clickAllInstallButtonTest"/>
+      <class name="sparq.clickInstallButtonTest"/>
+      <!-- Add more classes from Sparq directory if any -->
+    </classes>
+  </test>
+  
+  <!-- Test cases for Trackorder -->
+  <test name="TrackorderTests">
+    <classes>
+      <class name="trackorder.ButtonValidationTest"/>
+      <!-- Add more classes from Trackorder directory if any -->
+    </classes>
+  </test>
+  
+  <!-- Add more <test> tags here for other directories if any -->
+  
+</suite>
