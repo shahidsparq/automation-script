@@ -30,10 +30,10 @@ public class viewDemoTest {
         System.out.println(title);
         if(title.contains("Sparq"))
         {
-            System.out.println("The page is find fine.");
+            System.out.println("This is shopify sparq page for demo");
         }
         else
-            System.out.println("The page find is not that page.");
+            System.out.println("The page not found.");
 
         Thread.sleep(2000);
 
