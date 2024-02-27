@@ -20,18 +20,18 @@ public class clickAllInstallButtonTest {
     WebDriver driver;
 
     @Test
-    public void intallButton() throws InterruptedException {
-//        WebDriverManager.chromedriver().browserVersion("121.0.6167.160").setup();
+    public void allInsatllButton() throws InterruptedException {
+////        WebDriverManager.chromedriver().browserVersion("121.0.6167.160").setup();
+//
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("--window-size=1920,1080");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-
-        driver = new ChromeDriver(options);
-//        driver.manage().window().maximize();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         driver.get("https://www.sparq.ai/");
@@ -49,12 +49,16 @@ public class clickAllInstallButtonTest {
         }
 
         ArrayList<String> closeWindow = new ArrayList<String>(driver.getWindowHandles());
-        for (int i = 1; i <= closeWindow.size(); i++) {
+        for (int i = 1; i<closeWindow.size(); i++) {
             driver.switchTo().window(closeWindow.get(i));
             System.out.println("The Title of Header Links: " + driver.getTitle());
-            Thread.sleep(1000);
+
             driver.close();
+            driver.switchTo().window(closeWindow.get(0));
         }
+
+        System.out.println("Fun Script Run");
+        driver.quit();
 
     }
 
