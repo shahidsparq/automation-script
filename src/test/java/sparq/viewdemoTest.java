@@ -36,7 +36,7 @@ public class viewdemoTest {
         }
         else
         {
-            System.out.println("The page is not from Sparq page.");
+            System.out.println("The page is not from Sparq shopify page.");
         }
         System.out.println("Pass View Demo button");
     }
