@@ -21,6 +21,7 @@
     <classes>
       <class name="sparq.clickAllInstallButtonTest"/>
       <class name="sparq.clickInstallButtonTest"/>
+      <class name="sparq.viewdemoTest"/>
       <!-- Add more classes from Sparq directory if any -->
     </classes>
   </test>
