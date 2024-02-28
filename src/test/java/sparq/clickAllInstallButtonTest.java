@@ -57,7 +57,7 @@ public class clickAllInstallButtonTest {
             driver.switchTo().window(closeWindow.get(0));
         }
 
-        System.out.println("Fun Script Run");
+        System.out.println("Script completed");
         driver.quit();
 
     }
