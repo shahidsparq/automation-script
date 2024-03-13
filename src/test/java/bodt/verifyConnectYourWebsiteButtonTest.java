@@ -1,12 +1,14 @@
 package bodt;
 
-import java.time.Duration;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 
 public class verifyConnectYourWebsiteButtonTest {
@@ -25,6 +27,7 @@ public class verifyConnectYourWebsiteButtonTest {
 		System.out.println("Hello Bodt.io");
 		//Launch Chrome Browser
 		 WebDriver driver= new ChromeDriver(options);
+		 driver.manage().window().maximize();
 //		 Dimension screenSize = new Dimension(1366, 768); // You can adjust the width and height accordingly
 //	        driver.manage().window().setSize(screenSize);
 		//Maximize Browser
@@ -52,7 +55,7 @@ public class verifyConnectYourWebsiteButtonTest {
 		
 		String pageTitle = driver.getTitle();
 		System.out.println(pageTitle);
-		if(pageTitle.contains("Sign"))
+		if(pageTitle.contains("Log")|| pageTitle.contains("Log In"))
 		{
 			System.out.println("Verified: sign up page open when click on Link");
 		}
