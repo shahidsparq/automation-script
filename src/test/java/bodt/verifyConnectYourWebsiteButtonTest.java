@@ -27,6 +27,7 @@ public class verifyConnectYourWebsiteButtonTest {
 		System.out.println("Hello Bodt.io");
 		//Launch Chrome Browser
 		 WebDriver driver= new ChromeDriver(options);
+		 driver.manage().window().maximize();
 //		 Dimension screenSize = new Dimension(1366, 768); // You can adjust the width and height accordingly
 //	        driver.manage().window().setSize(screenSize);
 		//Maximize Browser
@@ -54,7 +55,7 @@ public class verifyConnectYourWebsiteButtonTest {
 		
 		String pageTitle = driver.getTitle();
 		System.out.println(pageTitle);
-		if(pageTitle.contains("Sign"))
+		if(pageTitle.contains("Log")|| pageTitle.contains("Log In"))
 		{
 			System.out.println("Verified: sign up page open when click on Link");
 		}
